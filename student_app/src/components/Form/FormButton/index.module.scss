@@ -1,0 +1,24 @@
+.formButton{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    font-family: helvetica;
+}
+
+.button{
+    display: flex;
+    padding: 1em;
+    border-radius: 0.35em;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.button:hover{
+    filter: brightness(80%);
+}

@@ -1,0 +1,211 @@
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    padding-top: 6em;
+}
+
+.aside{
+    width: 22em;
+}
+
+.cardViewer{
+    width: calc(100% - 22em);
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 650px;
+    max-width: 100%;
+    padding: 3em 1em;
+    background: rgba(var(--card-rgb), 0.1);
+    border: 3px solid rgba(var(--card-border-rgb), 0.15);
+    border-radius: 1em;
+    line-height: 4em;
+}
+
+.cardInfo{
+    width: 100%;
+
+   a{
+        width: 100%;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+    }
+}
+
+.liElement{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(var(--card-border-rgb), 0.15);
+    padding: 0 2em;
+
+    span, a{
+        width: 50%;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+    }
+}
+
+.listingTable {
+    text-align: left;
+    position: relative;
+    border-collapse: collapse; 
+    width: 80%;
+    outline: none;
+    border: none; 
+    table-layout: fixed;
+    
+    thead{
+        tr:first-child{
+            line-height: 2em;
+        }
+    
+    }
+
+    tr{
+        line-height: 2em;
+
+        th:last-child{
+            text-align: center !important;
+        }
+
+        td:last-child{
+            padding: 0.5em;
+            line-height: 2em;
+            div{
+                border-radius: 0.3em;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                width: calc(100% - 0.5em);
+                
+                span{    
+                width: 90%;
+                font-weight: bold !important;
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: center;
+                }
+            }
+        }
+    }
+
+    td:nth-child(4), th:nth-child(4) {
+        width: 30% !important;
+      }
+
+    td:nth-child(3), th:nth-child(3){
+        width: 20% !important;
+      }
+
+    th, td {
+        padding: 0.5em 1.5em;
+        width: 12.5%;
+      }
+
+      th {
+        background: #007AFF;
+        color: white;
+        font-weight: bold;
+        position: sticky;
+        top: 0; /* Don't forget this, required for the stickiness */
+        text-transform: capitalize;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+  }
+
+
+  @media (max-width: 699px) {
+    .listingTable {
+        text-align: left;
+        position: relative;
+        border-collapse: collapse; 
+        width: 100%;
+
+        thead {
+            display: none;
+        }
+    
+        td {
+            padding: 0.5em 1em;
+            width: 100%;
+            display: block;
+            text-align: right;
+          }
+
+          td:nth-child(4), td:nth-child(3){
+            width: 100% !important;
+          }
+
+          tr {
+            display: block;
+            margin: 1em 0;
+            padding: 1em ;
+            border-radius: 1em;
+            overflow: hidden;
+
+            td:last-child{
+                line-height: 4em;
+                div{
+                    border-radius: 0.3em;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    width: 100%;
+                    
+                    span{    
+                    width: 90%;
+                    font-weight: bold !important;
+                    display: inline-block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-align: center;
+                    }
+                }
+            }
+
+            td:nth-child(1)::before {
+                content: "Date";
+            }
+            td:nth-child(2)::before {
+                content: "N°";
+            }
+            td:nth-child(3)::before {
+                content: "Client";
+            }
+            td:nth-child(4)::before {
+                content: "Object";
+            }
+            td:nth-child(5)::before {
+                content: "Total";
+            }
+
+            td::before {
+                font-weight: bold;
+                text-align: left;
+                float: left;
+                width: 25%;
+            }
+        }
+      }
+    
+  }

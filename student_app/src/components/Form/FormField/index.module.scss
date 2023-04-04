@@ -1,0 +1,25 @@
+.textFiledDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    font-family: helvetica;
+
+    input{
+        display: flex;
+        padding: 1em;
+        border-radius: 0.35em;
+        border: none;
+        outline: none;
+    }
+
+    input:focus{
+        outline: 2px solid grey;
+    }
+
+    label{
+        margin: 0;
+        padding: 0;
+        text-transform: capitalize;
+    }
+}
