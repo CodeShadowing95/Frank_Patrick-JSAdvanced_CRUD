@@ -74,7 +74,7 @@ export default function Listing(props: any){
             className={style.form}>
 
             <h1 className={style.formTitle}>
-                New Student
+                Add a new student
             </h1>
 
             <div className={style.formCorp}>
